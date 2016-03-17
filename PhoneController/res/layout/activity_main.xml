@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"  >
+     <!-- <ProgressBar
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="80dp"
+        /> -->
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="220dp"
+            android:orientation="horizontal" >
+              <EditText
+                android:id="@+id/editText"
+                android:background="@drawable/edge_normal"
+                android:layout_width="100dp"
+                android:layout_height="25dp"                
+                android:editable="false"
+                android:text="   ---------------------"
+                android:textColor="@color/black"
+                android:textSize="10sp" >
+            </EditText>  
+         <ImageView 
+         android:id="@+id/link_status"
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:src="@drawable/network_disconnect"
+         android:layout_alignParentRight="true"
+		 android:layout_marginRight="10dp"
+         />   
+       </LinearLayout>  
+     
+    <!--   <Button 
+        android:id="@+id/btnSearchButton"  
+        android:layout_width="60dp"
+		android:layout_height="60dp" 
+		android:text="搜索"
+		android:textSize="10sp"
+		android:layout_marginTop="10dp"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="25dp"
+		android:gravity="center" 
+		android:background="@drawable/search_button3" /> -->
+    
+    <LinearLayout
+        android:id="@+id/state_show_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical" >
+    
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="状态"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/state"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edge_normal"
+                android:editable="false"
+                android:text="-------------------------------------"
+                android:textColor="@color/black"
+                android:textSize="18sp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/pick"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/selectoranswer" 
+                >
+            </ImageButton>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="40dp" >
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/hang"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/selectorend2" 
+                >
+            </ImageButton>
+       
+            </LinearLayout
+            >
+	       <ImageView 
+	        android:id="@+id/btnSetButton"  
+	        android:layout_width="30dp"
+			android:layout_height="30dp" 
+			android:layout_marginTop="15dp"
+			android:layout_marginLeft="310dp"
+			android:gravity="center" 
+			android:background="@drawable/tab_settings_pressed" />     
+			 <EditText
+                android:id="@+id/test"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edge_normal"
+                android:editable="false"
+                android:layout_marginTop="140dp"
+                android:textColor="@color/black"
+                android:textSize="12sp" >
+            </EditText>           
+       </LinearLayout>
+       
+    
+    <LinearLayout
+        android:id="@+id/dialer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="300dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <!-- 边界线 -->
+
+        <LinearLayout
+            android:id="@+id/layout_keyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="10" >
+
+            <EditText
+                android:id="@+id/edit_number"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@color/dialer_background"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/dial_prompt_text"
+                android:paddingLeft="10dip"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/typeface_color7"
+                android:textSize="16sp" >
+            </EditText>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/dialer_line1" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2" >
+
+                <include
+                    android:id="@+id/dialer_button_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/dialer_line1" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:weightSum="6" >
+
+                <include
+                    android:id="@+id/dialer_button_4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/dialer_line1" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:weightSum="6" >
+
+                <include
+                    android:id="@+id/dialer_button_7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/dialer_line1" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:weightSum="6" >
+
+                <include
+                    android:id="@+id/dialer_button_star"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_button_sharp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/dialer_line1" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:weightSum="8" >
+
+                <include
+                    android:id="@+id/dialer_hide_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    layout="@layout/phone_dialer_button_image" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_call_video_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    layout="@layout/phone_dialer_button_image" />
+
+                <ImageView
+                    android:layout_width="2dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialer_line2" />
+
+                <include
+                    android:id="@+id/dialer_delete"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    layout="@layout/phone_dialer_button_image" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialer_expand_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/dialer_show_button"
+            android:layout_width="28dip"
+            android:layout_height="27dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/keyboard_up" />
+    </LinearLayout>
+    
+
+</RelativeLayout>
